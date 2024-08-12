@@ -1,0 +1,32 @@
+//Array Duplicates
+class Solution {
+    public static ArrayList<Integer> duplicates(int[] arr) {
+        // code here
+        Set<Integer> set1=new HashSet<>();
+        Set<Integer> duplicate_set=new HashSet<>();
+        
+        for(int num:arr){
+            
+            if(set1.contains(num)){
+                duplicate_set.add(num);
+            }
+            set1.add(num);
+            
+        }
+        
+        ArrayList<Integer> result=new ArrayList<>();
+        
+        if(duplicate_set.isEmpty()){
+            result.add(-1);
+             }
+        else{
+            result.addAll(duplicate_set);
+        }
+        
+        Collections.sort(result);
+        
+        
+        
+        return result;
+    }
+}
