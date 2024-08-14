@@ -1,0 +1,20 @@
+//Missing number in array
+//use (n*(n+1))/2 for sum of n natural nos
+class Solution {
+
+    // Note that the size of the array is n-1
+    int missingNumber(int n, int arr[]) {
+
+        // Your Code Here
+        int sum=0;
+        for(int num:arr){
+            sum+=num;
+        }
+        
+        int formula_sum=(n*(n+1))/2;
+        
+        int res=formula_sum-sum;
+        
+        return res;
+    }
+}
