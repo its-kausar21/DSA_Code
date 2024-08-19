@@ -1,0 +1,23 @@
+//Given an array arr, return the second largest distinct element from an array. If the second largest element doesn't exist then return -1.
+class Solution {
+    public int print2largest(int[] arr) {
+        // Code Here
+        int largest=arr[0], s_largest=Integer.MIN_VALUE;
+        int n=arr.length;
+        
+        
+        for(int i=1;i<n;i++){
+            
+            if(arr[i]>largest){
+                s_largest=largest;
+                largest=arr[i];
+                 }
+                 
+             if(arr[i] < largest && arr[i] > s_largest){
+                 s_largest=arr[i];
+             }    
+        }
+        
+        return s_largest;
+    }
+}
