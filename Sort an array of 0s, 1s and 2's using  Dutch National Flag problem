@@ -1,3 +1,4 @@
+//time complexity- O(n)
 // solved using “Dutch National Flag problem”
 //Traverse over the array till mid <= hi, according to the value of arr[mid] we can have three cases:
 
