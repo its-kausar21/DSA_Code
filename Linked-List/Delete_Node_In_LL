@@ -1,0 +1,11 @@
+//focus on next pointer.If we want to delete a particular node then we must take nodes next pointers value to current node.
+Copy the value of the next node to the current node.
+Update the next pointer of the current node to skip over the next node by pointing it to the next node's next.
+
+class Solution {
+    public void deleteNode(ListNode node) {
+        node.val=node.next.val;
+        node.next=node.next.next;
+    }
+}
+
