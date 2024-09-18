@@ -1,3 +1,6 @@
+The Tortoise and Hare algorithm leverages two pointers, 'slow' and 'fast', initiated at the beginning of the linked list. The 'slow' pointer advances one node at a 
+time, while the 'fast' pointer moves two nodes at a time.
+
 class Solution {
     public ListNode middleNode(ListNode head) {
         
