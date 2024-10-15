@@ -1,0 +1,27 @@
+//Input: str = 222.111.111.111
+//Output: true
+//Input: str = 5555..555
+//Output: false
+
+class Solution {
+
+    public boolean isValid(String str) {
+        // Write your code here
+        String[] st=str.split("\\.");
+        if(st.length!=4){
+            return false;
+        }
+        
+        for(int i=0;i<st.length;i++){
+             // Check if the octet is empty or has leading zeros
+            if (st[i].isEmpty() || (st[i].length() > 1 && st[i].charAt(0) == '0')) {
+                return false;
+            }
+            
+            if(Integer.parseInt(st[i])>255 || Integer.parseInt(st[i])<0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
