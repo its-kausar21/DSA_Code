@@ -1,0 +1,29 @@
+class Solution {
+    // Function to check if two arrays are equal or not.
+    public static boolean check(int[] arr1, int[] arr2) {
+        // Your code here
+        HashMap<Integer,Integer> mp=new HashMap<>();
+        
+        if(arr1.length!=arr2.length){
+            return false;
+        }
+        
+        for(int num:arr1){
+            mp.put(num, mp.getOrDefault(num,0)+1);
+        }
+        
+        for(int num:arr2){
+            if(!mp.containsKey(num)){
+                return false;
+            }
+            
+            mp.put(num,mp.get(num)-1);
+            
+            if(mp.get(num)==0){
+                mp.remove(num);
+            }
+        }
+        
+        return mp.isEmpty();
+    }
+}
